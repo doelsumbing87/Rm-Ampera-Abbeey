@@ -207,14 +207,6 @@
   font-style: normal;
 }
 
-/* Pacifico Font */
-@font-face {
-  font-family: "Pacifico";
-  src: url("./../fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Color Variables */
 :root {
   --primary-color: #e5612f; /* Example Primary Color */
@@ -259,7 +251,7 @@ h2 {
 h5 {
   position: relative;
   display: inline;
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: var(--primary-color);
 }
 
@@ -298,7 +290,7 @@ button,
 }
 
 .logo {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: var(--primary-color);
 }
 
@@ -336,7 +328,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .loader p {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-size: 60px;
 }
 
@@ -547,7 +539,7 @@ header.scrolled {
 }
 
 .shopping-cart-header h2 {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-weight: 300;
   font-size: 24px;
 }
@@ -576,7 +568,7 @@ header.scrolled {
 }
 
 .shopping-cart-item .item-price p, .shopping-cart-footer .footet-total-price{
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-size: 18px;
   color: var(--primary-color);
 }
@@ -913,7 +905,7 @@ header.scrolled {
 .menu-page .chef-choise .section-title {
   position: relative;
   display: inline;
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: var(--primary-color);
 }
 
@@ -1120,7 +1112,7 @@ header.scrolled {
 .chef-choise .item-wrapper .item-right .item-price,
 .chef-choise .item-wrapper .item-right .price-symbol {
   color: var(--primary-color);
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-size: 24px;
 }
 
@@ -1447,7 +1439,7 @@ header.scrolled {
 
 .reservation .reservation-content h2 {
   position: relative;
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-weight: 300;
 }
 
@@ -1513,7 +1505,7 @@ header.scrolled {
 }
 
 .our-services h4 {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-weight: 300;
 }
 
@@ -1596,7 +1588,7 @@ header.scrolled {
 }
 
 .card .blog-content .blog-title a {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-size: 20px;
   font-weight: 300;
   color: black;
@@ -1720,7 +1712,7 @@ footer p {
 }
 
 .reservation-box .reservation-wrapper h2 {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-weight: 300;
   padding-bottom: 20px;
   color: white;
@@ -1775,7 +1767,7 @@ footer p {
 }
 
 .page-banner .banner-content h2 {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   position: relative;
   font-weight: 400;
   word-spacing: 16px;
@@ -2084,7 +2076,7 @@ footer p {
 }
 
 .reservation-page .reservation-services h4{
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: white;
   font-weight: 300;
 }
@@ -2127,7 +2119,7 @@ footer p {
 }
 
 .reservation-page .reservation-events .event-card .event-heading .heading p{
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: #29272e;
   font-weight: 300;
   font-size: 24px;
@@ -2327,6 +2319,7 @@ footer p {
 }
 
 .about-page .our-special .special-card .box-showcase h2 {
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: var(--primary-color);
   font-size: 30px; 
   font-weight: 700;
@@ -2377,7 +2370,7 @@ footer p {
 }
 
 .counter .counter-box .number {
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   font-size: 60px;
   font-weight: 300;
   color: var(--primary-color);
@@ -2386,7 +2379,7 @@ footer p {
 
 .counter .counter-box .heading {
   font-size: 16px;
-  font-family: "Pacifico", cursive;
+  font-family: "Heebo", sans-serif; /* Changed from Pacifico */
   color: black;
 }
 
