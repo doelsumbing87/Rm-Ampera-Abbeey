@@ -1,0 +1,214 @@
+/* admin.css */
+
+/* Pastikan body dan html memiliki tinggi penuh agar sidebar bisa sticky */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family-heebo);
+    color: var(--text-color);
+    display: flex; /* Menggunakan flexbox untuk layout keseluruhan */
+    flex-direction: column; /* Konten diatur dalam kolom (header, main content, footer) */
+}
+
+/* Header Admin */
+header.admin-header {
+    background-color: var(--heading-color);
+    color: var(--text-color-white);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Membuat header sticky di atas */
+    top: 0;
+    z-index: 1020; /* Pastikan di atas elemen lain */
+    width: 100%; /* Lebar penuh */
+}
+
+.admin-header .logo h1 {
+    color: var(--text-color-white) !important; /* Gunakan !important jika perlu override */
+    font-family: var(--font-family-nunito);
+    font-weight: 800;
+    font-size: 1.8rem; /* Sedikit lebih kecil agar tidak terlalu besar di header admin */
+}
+
+.admin-header .logo a {
+    text-decoration: none;
+    color: var(--text-color-white);
+    display: flex; /* Agar ikon dan teks sejajar */
+    align-items: center;
+}
+
+.admin-header .logo i {
+    color: var(--primary-color);
+    font-size: 2rem; /* Ukuran ikon yang pas */
+}
+
+.admin-nav .nav-link {
+    color: var(--text-color-white);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-family-heebo);
+    font-weight: 500;
+}
+.admin-nav .nav-link:hover, .admin-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-color-white);
+}
+
+/* Wrapper utama untuk sidebar dan konten */
+.main-wrapper-admin {
+    display: flex;
+    flex: 1; /* Agar wrapper ini mengisi sisa ruang vertikal yang tersedia */
+    width: 100%;
+}
+
+/* Sidebar Navigasi Admin */
+.sidebar {
+    background-color: var(--heading-color);
+    color: var(--text-color-white);
+    padding-top: 20px;
+    width: 250px; /* Lebar tetap */
+    flex-shrink: 0; /* Agar tidak menyusut */
+    position: sticky; /* Membuat sidebar sticky */
+    top: 0; /* Menempel di bagian atas viewport */
+    height: calc(100vh - 60px); /* Sesuaikan tinggi sidebar agar mengisi sisa tinggi viewport (100vh - tinggi header) */
+    overflow-y: auto; /* Jika konten sidebar terlalu panjang, bisa di-scroll */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.sidebar .nav-link {
+    color: #adb5bd;
+    padding: 12px 20px;
+    margin-bottom: 5px;
+    border-radius: .25rem;
+    font-family: var(--font-family-heebo);
+    font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+}
+.sidebar .nav-link.active {
+    font-weight: 600;
+}
+
+/* Konten Utama Admin */
+.content-area {
+    background-color: var(--background-color); /* Ubah ke background-color agar match body */
+    padding: 30px;
+    margin: 0; /* Hapus margin di sini, biar flexbox yang atur */
+    flex-grow: 1; /* Agar mengisi sisa ruang horizontal */
+    overflow-y: auto; /* Jika konten terlalu panjang, bisa di-scroll */
+    /* Remove box-shadow and border-radius from here if content area should blend with body background */
+}
+
+.content-area > .card { /* Berikan gaya card di sini jika ingin ada shadow/border */
+    background-color: var(--text-color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px; /* Jarak antar card */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-nunito);
+    color: var(--heading-color);
+}
+
+/* Card di Dashboard */
+.card {
+    border: none;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,.08); (Pindahkan ke .content-area > .card jika ingin background card putih) */
+    border-radius: 8px;
+}
+.card-title {
+    font-family: var(--font-family-heebo);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.card-text.display-4 {
+    font-family: var(--font-family-nunito);
+    font-weight: 800;
+    font-size: 2.5rem; /* Sedikit lebih kecil agar lebih proporsional */
+}
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.bg-success {
+    background-color: #28a745 !important;
+}
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+/* Tabel */
+.table th {
+    background-color: var(--secondary-color);
+    color: var(--text-color-white);
+    font-family: var(--font-family-heebo);
+    font-weight: 600;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.03);
+}
+.table td {
+    font-family: var(--font-family-heebo);
+    font-size: 0.95rem;
+}
+
+/* Tombol Aksi Tabel */
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+}
+.btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: var(--text-color) !important;
+}
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+/* Tombol Tambah Menu Baru */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    font-family: var(--font-family-nunito);
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--darker-primary-color) !important;
+    border-color: var(--darker-primary-color) !important;
+}
+
+/* Footer Admin Sederhana */
+footer.admin-footer {
+    background-color: var(--heading-color);
+    color: #adb5bd;
+    padding: 15px 0;
+    font-family: var(--font-family-heebo);
+    font-size: 0.9rem;
+    text-align: center;
+    flex-shrink: 0; /* Agar footer tidak menyusut saat konten di-scroll */
+}
+
+/* Override gaya umum yang tidak perlu di admin */
+.loader, .shopping-cart, .search-bar, .mobile-nav-icons, #hamburger, #hamburger-cross {
+    display: none !important;
+}
+
+/* Di style.css atau admin.css */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+.text-primary-custom:hover {
+    color: var(--darker-primary-color) !important; /* Agar ada efek hover */
+}
